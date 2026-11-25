@@ -25,9 +25,9 @@
      sabbia   #EEDFCC  superfici delicate, badge
      oliva    #A9A27F  linee e dettagli decorativi (mai per testi)
      crema calda #EFE3D3  sezioni alternate (A chi mi rivolgo, FAQ)
-     cacao scuro #2F2823  footer, con testi crema
+     cacao scuro #2F2823  footer e sezione WATT, con testi crema (14:1 con il bianco)
      muschio  #4F5B3C  link e mini-titoli (6.8:1 su crema)
-     oliva scuro #6E7752  sfondo riservato alla sola sezione WATT (4.8:1 con il bianco)
+     (sezione WATT: stesso cacao scuro del footer, --bg-2)
      terracotta #9A5B3F  pulsanti principali e accenti (5.3:1 con testo bianco)
      cacao    #3A322C  testi */
   --warm: #FBF7F1;
@@ -42,7 +42,7 @@
   --white: #FFFFFF;
   /* Sfondi sezione (alternanza) */
   --bg-1: #FFFDF9;
-  --bg-2: #6E7752;
+  --bg-2: #2F2823;
   --bg-3: #F7EFE4;
   --bg-4: #EFE3D3;
 
@@ -381,7 +381,7 @@ h3 {
 }
 .section-cta { display: flex; justify-content: center; margin-top: clamp(44px, 5vw, 64px); }
 
-/* Sezione WATT su oliva scuro (--bg-2): titoli bianchi grandi; mini-titolo in pillola chiara per garantire il contrasto */
+/* Sezione WATT su cacao scuro (--bg-2): titoli bianchi grandi; mini-titolo in pillola chiara per garantire il contrasto */
 .bg-mauve h2 { color: var(--white); }
 .bg-mauve .eyebrow {
   width: fit-content;
@@ -1031,7 +1031,7 @@ html:not(.js) .faq-icon { display: none; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: #2F2823; /* cacao scuro */
+  background: var(--bg-2); /* cacao scuro */
   color: #F7EFE4;
   border-top: 0;
   padding-top: clamp(64px, 7vw, 96px);
