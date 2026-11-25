@@ -24,7 +24,8 @@
      lino     #F7EFE4  sfondo sezioni chiare alternate
      sabbia   #EEDFCC  superfici delicate, badge
      oliva    #A9A27F  linee e dettagli decorativi (mai per testi)
-     crema calda #EFE3D3  sezioni alternate (A chi mi rivolgo, FAQ) e footer
+     crema calda #EFE3D3  sezioni alternate (A chi mi rivolgo, FAQ)
+     cacao scuro #2F2823  footer, con testi crema
      muschio  #4F5B3C  link e mini-titoli (6.8:1 su crema)
      oliva scuro #6E7752  sfondo riservato alla sola sezione WATT (4.8:1 con il bianco)
      terracotta #9A5B3F  pulsanti principali e accenti (5.3:1 con testo bianco)
@@ -1030,25 +1031,26 @@ html:not(.js) .faq-icon { display: none; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--bg-4);
-  color: var(--ink);
-  border-top: 1px solid rgba(169, 162, 127, 0.45);
+  background: #2F2823; /* cacao scuro */
+  color: #F7EFE4;
+  border-top: 0;
   padding-top: clamp(64px, 7vw, 96px);
 }
-.site-footer a { color: var(--ink); text-decoration: none; }
-.site-footer a:hover { text-decoration: underline; color: var(--clay); }
+.site-footer a { color: #F7EFE4; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; color: #E8C3A8; }
+.site-footer :focus-visible { outline-color: #F7EFE4; }
 .footer-inner {
   display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: 40px 64px; align-items: start;
   padding-bottom: 48px;
 }
-.wordmark-light { color: var(--ink); }
+.wordmark-light { color: #FBF7F1; }
 .wordmark-light .wordmark-name { font-size: 26px; }
-.wordmark-light .wordmark-role { color: var(--forest); }
+.wordmark-light .wordmark-role { color: #D9C8B3; }
 .footer-tagline {
   margin-top: 22px; max-width: 34ch;
   font-family: var(--serif); font-size: 21px; font-weight: 500; line-height: 1.4;
-  color: var(--clay);
+  color: #E8C3A8;
 }
 .footer-links {
   list-style: none;
@@ -1061,12 +1063,12 @@ html:not(.js) .faq-icon { display: none; }
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: 12px 24px;
   padding-block: 24px 28px;
-  border-top: 1px solid rgba(169, 162, 127, 0.55);
-  font-size: 13.5px; color: var(--muted);
+  border-top: 1px solid rgba(247, 239, 228, 0.18);
+  font-size: 13.5px; color: #D9C8B3;
 }
 .footer-bottom p { margin: 0; }
 .footer-legal { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 24px; }
-.footer-legal a { display: inline-block; padding-block: 6px; color: var(--muted); }
+.footer-legal a { display: inline-block; padding-block: 6px; color: #D9C8B3; }
 
 @media (max-width: 860px) {
   .footer-inner { grid-template-columns: 1fr; text-align: center; }
